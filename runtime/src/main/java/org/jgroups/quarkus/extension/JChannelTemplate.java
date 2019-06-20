@@ -1,4 +1,4 @@
-package io.quarkus.jgroups;
+package org.jgroups.quarkus.extension;
 
 import io.quarkus.arc.runtime.BeanContainer;
 import io.quarkus.runtime.annotations.Template;

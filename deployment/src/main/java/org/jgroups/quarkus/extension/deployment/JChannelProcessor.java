@@ -1,4 +1,8 @@
-package io.quarkus.jgroups.deployment;
+package org.jgroups.quarkus.extension.deployment;
+
+import org.jgroups.quarkus.extension.JChannelConfig;
+import org.jgroups.quarkus.extension.JChannelProducer;
+import org.jgroups.quarkus.extension.JChannelTemplate;
 
 import io.quarkus.arc.deployment.AdditionalBeanBuildItem;
 import io.quarkus.arc.deployment.BeanContainerBuildItem;
@@ -7,9 +11,6 @@ import io.quarkus.deployment.annotations.BuildStep;
 import io.quarkus.deployment.annotations.ExecutionTime;
 import io.quarkus.deployment.annotations.Record;
 import io.quarkus.deployment.builditem.FeatureBuildItem;
-import io.quarkus.jgroups.JChannelConfig;
-import io.quarkus.jgroups.JChannelProducer;
-import io.quarkus.jgroups.JChannelTemplate;
 
 /**
  * @author Bela Ban

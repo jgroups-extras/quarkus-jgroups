@@ -1,4 +1,4 @@
-package io.quarkus.jgroups;
+package org.jgroups.quarkus.extension;
 
 import io.quarkus.runtime.annotations.ConfigItem;
 import io.quarkus.runtime.annotations.ConfigPhase;

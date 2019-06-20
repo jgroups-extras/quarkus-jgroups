@@ -1,4 +1,4 @@
-package io.quarkus.jgroups;
+package org.jgroups.quarkus.extension;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

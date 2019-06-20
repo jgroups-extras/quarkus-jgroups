@@ -1,4 +1,4 @@
-package io.quarkus.jgroups.deployment;
+package org.jgroups.quarkus.extension.deployment;
 
 import org.jgroups.JChannel;
 

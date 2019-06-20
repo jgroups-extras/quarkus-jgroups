@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>org.jgroups.quarkus.extension</groupId>
     <artifactId>quarkus-jgroups-parent</artifactId>
     <name>Quarkus - JGroups</name>
 
