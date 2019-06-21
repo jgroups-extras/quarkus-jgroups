@@ -11,8 +11,8 @@ import io.quarkus.runtime.annotations.ConfigRoot;
 @ConfigRoot(name = "channel", phase = ConfigPhase.BUILD_AND_RUN_TIME_FIXED)
 public class JChannelConfig {
 
-    /** bla */
-    @ConfigItem(defaultValue = "udp.xml")
+    /** If no configuration file is defined in application.properties, this will be used */
+    @ConfigItem(defaultValue = "tcp.xml")
     public String config;
 
 }
