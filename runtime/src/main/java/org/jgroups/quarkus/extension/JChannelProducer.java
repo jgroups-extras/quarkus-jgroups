@@ -1,10 +1,10 @@
 package org.jgroups.quarkus.extension;
 
+import org.jgroups.JChannel;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 import javax.inject.Singleton;
-
-import org.jgroups.JChannel;
 
 /**
  * @author Bela Ban
@@ -14,8 +14,9 @@ import org.jgroups.JChannel;
 public class JChannelProducer {
     JChannel channel;
 
-    void create(String config) throws Exception {
-        channel = new JChannel(config);
+    void create(JChannelConfig cfg) throws Exception {
+        channel = new JChannel(cfg.config)
+                .connect(cfg.cluster);
     }
 
     @Singleton

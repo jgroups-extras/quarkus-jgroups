@@ -15,4 +15,8 @@ public class JChannelConfig {
     @ConfigItem(defaultValue = "tcp.xml")
     public String config;
 
+    /** The name of the cluster to join */
+    @ConfigItem(defaultValue = "quarkus-jgroups-chat")
+    public String cluster;
+
 }

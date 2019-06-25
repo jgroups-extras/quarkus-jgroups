@@ -12,7 +12,7 @@ public class JChannelTemplate {
 
     public void configure(BeanContainer container, JChannelConfig config) throws Exception {
         JChannelProducer channel = container.instance(JChannelProducer.class);
-        channel.create(config.config);
+        channel.create(config);
     }
 
 }

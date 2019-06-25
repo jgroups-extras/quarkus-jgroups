@@ -26,9 +26,7 @@ public class JChannelProcessor {
     @Record(ExecutionTime.STATIC_INIT)
     void build(BuildProducer<FeatureBuildItem> feature, JChannelTemplate template,
             BeanContainerBuildItem beanContainer, JChannelConfig config) throws Exception {
-
         feature.produce(new FeatureBuildItem("jgroups-channel"));
-
         template.configure(beanContainer.getValue(), config);
     }
 }
