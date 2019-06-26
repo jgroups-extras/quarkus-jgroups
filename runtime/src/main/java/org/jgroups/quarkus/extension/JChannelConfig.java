@@ -15,6 +15,14 @@ public class JChannelConfig {
     @ConfigItem(defaultValue = "tcp.xml")
     public String config;
 
+    /** If defined, this overrides the value defined in the config above (e.g. TCP.bind_addr) */
+    @ConfigItem
+    public String bind_addr;
+
+    /** If defined, this overrides the value defined in the config above (TCPPING.initial_hosts) */
+    @ConfigItem
+    public String initial_hosts;
+
     /** The name of the cluster to join */
     @ConfigItem(defaultValue = "quarkus-jgroups-chat")
     public String cluster;
