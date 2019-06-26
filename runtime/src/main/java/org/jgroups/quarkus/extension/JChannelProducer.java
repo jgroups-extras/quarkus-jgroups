@@ -15,8 +15,7 @@ public class JChannelProducer {
     JChannel channel;
 
     void create(JChannelConfig cfg) throws Exception {
-        channel = new JChannel(cfg.config)
-                .connect(cfg.cluster);
+        channel = new JChannel(cfg.config);
     }
 
     @Singleton
