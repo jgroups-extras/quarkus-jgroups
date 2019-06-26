@@ -24,4 +24,9 @@ public class JChannelProducer {
         return channel;
     }
 
+    @Singleton
+    public void connect(String cluster) throws Exception {
+        channel.connect(cluster);
+    }
+
 }

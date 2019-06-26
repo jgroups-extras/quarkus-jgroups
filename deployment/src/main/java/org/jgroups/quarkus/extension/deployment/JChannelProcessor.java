@@ -22,11 +22,27 @@ public class JChannelProcessor {
         return AdditionalBeanBuildItem.unremovableOf(JChannelProducer.class);
     }
 
+    /**
+     * Creates a JChannel at _build time_, but does not yet connect it. Connection can only be done at runtime, as
+     * this will create threads, sockets etc
+     */
     @BuildStep
     @Record(ExecutionTime.STATIC_INIT)
     void build(BuildProducer<FeatureBuildItem> feature, JChannelTemplate template,
             BeanContainerBuildItem beanContainer, JChannelConfig config) throws Exception {
         feature.produce(new FeatureBuildItem("jgroups-channel"));
-        template.configure(beanContainer.getValue(), config);
+        template.createChannel(beanContainer.getValue(), config);
+    }
+
+    /**
+     * Connects the channel created in {@link #build(BuildProducer, JChannelTemplate, BeanContainerBuildItem, JChannelConfig)}.
+     * This starts threads, creates sockets etc, so it needs to be done at runtime
+     */
+    @BuildStep
+    @Record(ExecutionTime.RUNTIME_INIT)
+    void connect(BuildProducer<FeatureBuildItem> feature, JChannelTemplate template,
+            BeanContainerBuildItem beanContainer, JChannelConfig config) throws Exception {
+        feature.produce(new FeatureBuildItem("jgroups-channel"));
+        template.connectChannel(beanContainer.getValue(), config);
     }
 }

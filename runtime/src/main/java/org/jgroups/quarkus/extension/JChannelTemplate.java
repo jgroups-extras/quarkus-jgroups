@@ -10,9 +10,13 @@ import io.quarkus.runtime.annotations.Template;
 @Template
 public class JChannelTemplate {
 
-    public void configure(BeanContainer container, JChannelConfig config) throws Exception {
+    public void createChannel(BeanContainer container, JChannelConfig config) throws Exception {
         JChannelProducer channel = container.instance(JChannelProducer.class);
         channel.create(config);
     }
 
+    public void connectChannel(BeanContainer container, JChannelConfig cfg) throws Exception {
+        JChannelProducer channel = container.instance(JChannelProducer.class);
+        channel.connect(cfg.cluster);
+    }
 }
