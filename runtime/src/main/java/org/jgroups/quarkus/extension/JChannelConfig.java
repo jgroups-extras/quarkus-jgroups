@@ -27,4 +27,8 @@ public class JChannelConfig {
     @ConfigItem(defaultValue = "quarkus-jgroups-chat")
     public String cluster;
 
+    public String toString() {
+        return String.format("config=%s, bind_addr=%s, initial_hosts=%s, cluster=%s\n",
+                config, bind_addr, initial_hosts, cluster);
+    }
 }
