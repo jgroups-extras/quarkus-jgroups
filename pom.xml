@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <properties>
-        <aws.version>1.11.368</aws.version>
         <!-- nexus-staging-maven-plugin -->
         <autoReleaseAfterClose>true</autoReleaseAfterClose>
         <nexus.server.id>jboss-releases-repository</nexus.server.id>
-        <nexus.server.url>https://repository.jboss.org/nexus</nexus.server.url>
+        <!--nexus.server.url>https://repository.jboss.org/nexus</nexus.server.url-->
+        <nexus.server.url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2</nexus.server.url>
         <nexus.snapshot.server.id>jboss-snapshots-repository</nexus.snapshot.server.id>
         <nexus.snapshot.server.url>https://repository.jboss.org/nexus/content/repositories/snapshots/</nexus.snapshot.server.url>
     </properties>
