@@ -13,6 +13,24 @@
         <nexus.snapshot.server.url>https://repository.jboss.org/nexus/content/repositories/snapshots/</nexus.snapshot.server.url>
     </properties>
 
+    <parent>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-build-parent</artifactId>
+        <version>0.18.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.jgroups.quarkus.extension</groupId>
+    <artifactId>quarkus-jgroups-parent</artifactId>
+    <name>Quarkus - JGroups</name>
+
+    <packaging>pom</packaging>
+    <modules>
+        <module>deployment</module>
+        <module>runtime</module>
+    </modules>
+
+
     <distributionManagement>
         <repository>
             <id>${nexus.server.id}</id>
@@ -78,22 +96,6 @@
 
     </repositories>
 
-    <parent>
-        <groupId>io.quarkus</groupId>
-        <artifactId>quarkus-build-parent</artifactId>
-        <version>0.18.0</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>org.jgroups.quarkus.extension</groupId>
-    <artifactId>quarkus-jgroups-parent</artifactId>
-    <name>Quarkus - JGroups</name>
-
-    <packaging>pom</packaging>
-    <modules>
-        <module>deployment</module>
-        <module>runtime</module>
-    </modules>
 
 
 
