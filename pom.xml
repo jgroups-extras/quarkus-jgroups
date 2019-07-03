@@ -4,8 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <properties>
+        <quarkus.version>0.18.0</quarkus.version>
+        <graalvm.version>19.0.2</graalvm.version>
         <!-- nexus-staging-maven-plugin -->
         <autoReleaseAfterClose>true</autoReleaseAfterClose>
+
+        <nexus.staging.id>jboss-releases-repository</nexus.staging.id>
+        <nexus.staging.url>https://repository.jboss.org/nexus</nexus.staging.url>
+
         <nexus.server.id>jboss-releases-repository</nexus.server.id>
         <!--nexus.server.url>https://repository.jboss.org/nexus</nexus.server.url-->
         <nexus.server.url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2</nexus.server.url>
@@ -30,6 +36,21 @@
         <module>runtime</module>
     </modules>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <!-- See configuration details at http://books.sonatype.com/nexus-book/reference/staging-deployment.html -->
+                    <nexusUrl>${nexus.staging.url}</nexusUrl>
+                    <serverId>${nexus.staging.id}</serverId>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <distributionManagement>
         <repository>
