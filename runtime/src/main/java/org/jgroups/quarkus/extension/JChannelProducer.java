@@ -1,15 +1,16 @@
 package org.jgroups.quarkus.extension;
 
-import org.jgroups.JChannel;
-import org.jgroups.protocols.TP;
-import org.jgroups.stack.DiagnosticsHandler;
-import org.jgroups.stack.NonReflectiveProbeHandler;
+import java.util.Set;
+import java.util.stream.Stream;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 import javax.inject.Singleton;
-import java.util.Set;
-import java.util.stream.Stream;
+
+import org.jgroups.JChannel;
+import org.jgroups.protocols.TP;
+import org.jgroups.stack.DiagnosticsHandler;
+import org.jgroups.stack.NonReflectiveProbeHandler;
 
 /**
  * @author Bela Ban

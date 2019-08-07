@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <properties>
-        <quarkus.version>0.18.0</quarkus.version>
-        <graalvm.version>19.0.2</graalvm.version>
+        <quarkus.version>0.20.0</quarkus.version>
+        <graalvm.version>19.1.1</graalvm.version>
         <!-- nexus-staging-maven-plugin -->
         <autoReleaseAfterClose>true</autoReleaseAfterClose>
 
@@ -22,7 +22,7 @@
     <parent>
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-build-parent</artifactId>
-        <version>0.18.0</version>
+        <version>0.20.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
