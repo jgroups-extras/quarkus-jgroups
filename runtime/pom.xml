@@ -2,6 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <properties>
+        <jgroups.version>4.1.4.Final</jgroups.version>
+    </properties>
     <parent>
         <groupId>org.jgroups.quarkus.extension</groupId>
         <artifactId>quarkus-jgroups-parent</artifactId>
@@ -38,7 +41,7 @@
         <dependency>
             <groupId>org.jgroups</groupId>
             <artifactId>jgroups</artifactId>
-            <version>4.1.2.Final</version>
+            <version>${jgroups.version}</version>
         </dependency>
     </dependencies>
 
