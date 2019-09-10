@@ -5,7 +5,7 @@
 
     <properties>
         <quarkus.version>0.20.0</quarkus.version>
-        <graalvm.version>19.1.1</graalvm.version>
+        <graalvm.version>19.2.0</graalvm.version>
         <!-- nexus-staging-maven-plugin -->
         <autoReleaseAfterClose>true</autoReleaseAfterClose>
 
