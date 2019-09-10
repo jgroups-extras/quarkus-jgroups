@@ -1,7 +1,7 @@
 package org.jgroups.quarkus.extension;
 
 import io.quarkus.arc.runtime.BeanContainer;
-import io.quarkus.runtime.annotations.Template;
+import io.quarkus.runtime.annotations.Recorder;
 import org.jboss.logging.Logger;
 import org.jgroups.protocols.TCPPING;
 import org.jgroups.protocols.TP;
@@ -15,7 +15,7 @@ import java.util.List;
  * @author Bela Ban
  * @since x.y
  */
-@Template
+@Recorder
 public class JChannelTemplate {
     static final Logger log = Logger.getLogger(JChannelTemplate.class);
 
