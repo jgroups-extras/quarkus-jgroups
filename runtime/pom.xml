@@ -3,12 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <properties>
-        <jgroups.version>4.1.4.Final</jgroups.version>
+        <jgroups.version>4.1.8.Final</jgroups.version>
     </properties>
     <parent>
         <groupId>org.jgroups.quarkus.extension</groupId>
         <artifactId>quarkus-jgroups-parent</artifactId>
-        <version>0.21.2</version>
+        <version>1.0.1.Final</version>
         <relativePath>../</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
